@@ -15,7 +15,6 @@ const GUI = ({changesMade, metaData}) => {
             "Min":metaData.Min,
             "Max":metaData.Max,
     }
-    // console.log(metaData)
 
     const guiChanges=(e)=>{
         changesMade(e)
@@ -49,15 +48,9 @@ const GUI = ({changesMade, metaData}) => {
                 <label htmlFor="representation">Representation</label>
                 <select id="representation" className=' bg-gray-200 border-r-8 outline-none px-2 py-2 cursor-pointer rounded-md' style={{boxShadow:"0 2px 4px rgba(0, 0, 0, 0.25)"}} onChange={viewOptions}>
                     <option value="surface">Surface</option>
-                    {/* <option style={options} value="surface_with_edges">Surface With Edges</option> */}
-                    {metaData.scalerType!=='Element_Data' && 
-                        <>
-                        <option value="points">Points</option>
-                        <option value="wireframe">Wireframe</option>
-                        </>
-                    }
+                    <option value="points">Points</option>
+                    <option value="wireframe">Wireframe</option>
                     <option value="surface_with_edges">Surface With Edges</option>
-                    
                 </select>
                 {
                     active==="points" &&
