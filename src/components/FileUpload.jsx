@@ -20,7 +20,7 @@ const FileUpload = ({vtkFileData}) => {
         e.preventDefault();
         sendBack(e.dataTransfer.files)
     }
-  return (<>
+  return (<div className='relative h-dvh w-full'>
     <Toaster/>
     <div
         className='absolute w-fit top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-200 rounded-lg shadow-2xl p-4 flex flex-col justify-center items-center overflow-hidden outline outline-8 outline-gray-300'
@@ -35,8 +35,12 @@ const FileUpload = ({vtkFileData}) => {
             onDrop={byDrop}/>
         <h4 className='pt-4 text-md font-bold text-gray-700'>Select or Drop the VTK</h4>  
     </div>
-  </>
+    <div className='absolute left-4 bottom-4 p-4'>
+      <a href="https://github.com/BittuKumar183040/modelRenderer/tree/main/SampleFiles">Sample Files</a>
+    </div>
+  </div>
   )
 }
+
 
 export default FileUpload
