@@ -35,8 +35,8 @@ const FileUpload = ({vtkFileData}) => {
             onDrop={byDrop}/>
         <h4 className='pt-4 text-md font-bold text-gray-700'>Select or Drop the VTK</h4>  
     </div>
-    <div className='absolute left-4 bottom-4 p-4'>
-      <a href="https://github.com/BittuKumar183040/modelRenderer/tree/main/SampleFiles">Sample Files</a>
+    <div className='absolute left-4 bottom-4'>
+      <a className='p-2 px-8 bg-gray-200 shadow-md rounded-md' href="https://github.com/BittuKumar183040/modelRenderer/tree/main/SampleFiles">Sample Files</a>
     </div>
   </div>
   )
@@ -44,3 +44,4 @@ const FileUpload = ({vtkFileData}) => {
 
 
 export default FileUpload
+
